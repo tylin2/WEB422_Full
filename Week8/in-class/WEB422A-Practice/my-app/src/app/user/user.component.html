@@ -1,0 +1,14 @@
+<div *ngIf="currentUser">
+<h4>User: {{currentUser.id}}</h4>
+<p>
+    Full Name: {{currentUser.first_name}} {{currentUser.last_name}}<br />
+    Email: {{currentUser.email}}<br />
+    Avatar: <br />
+    <img [src]="currentUser.avatar" alt="avatar" />
+</p>
+</div>
+<div *ngIf="!currentUser">
+    <p>Loading...</p>
+</div>
+<hr />
+{{num}}

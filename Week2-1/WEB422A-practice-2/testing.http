@@ -1,0 +1,7 @@
+PUT http://localhost:8080/api/names/1
+Content-Type: application/json
+
+{
+    "fName": "Lynda",
+    "lName": "Smith"
+}

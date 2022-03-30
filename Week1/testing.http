@@ -1,0 +1,25 @@
+GET http://localhost:8080/api/names
+
+<!--以下不用的要全部刪除才跑得動...-->
+<!--POST http://localhost:8080/api/names
+Content-Type: application/json
+
+{
+    "fName":"newFirstName",
+    "lName":"newLastName"
+}
+-->
+
+
+<!--PUT http://localhost:8080/api/names/1
+Content-Type: application/json
+
+{
+   "fName":"Lynda",
+   "lName":"Simth"
+}
+-->
+
+<!--
+DELETE http://localhost:8080/api/names/0
+-->

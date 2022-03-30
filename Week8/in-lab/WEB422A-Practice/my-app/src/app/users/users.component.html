@@ -1,0 +1,14 @@
+<button (click)="goToPage(1)">Page 1</button>&nbsp;&nbsp;<button (click)="goToPage(2)">Page 2</button><br /><br />
+
+<table>
+    <tr>
+        <th>Email</th>
+        <th>Full Name</th>
+        <th>Avatar</th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td><a [href]="'mailto:' + user.email">{{user.email}}</a></td>
+        <td>{{user.first_name}} {{user.last_name}}</td>
+        <td><img [routerLink]="['/user', user.id]" [src]="user.avatar" alt="avatar" /></td>
+    </tr>
+</table>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+
+    <script>
+
+        //console.log("Hello World!")
+        
+        // //GET ALL NAME
+        // //fetch("http://localhost:8080/api/names")
+        // fetch("/api/names").then(res=>res.json()).then(data=>{
+        //     //console.log(data[0].fName)
+        //     console.log(data);
+        // }).catch(err=>{
+        //     console.log(err);
+        // })
+        
+        // //延伸part
+        // //USING ASYNC TO GET ALL NAME
+        // async function getAllNames(){
+        //     try{
+        //         let result=await fetch("/api/names");
+        //         let data=await result.json();
+        //         console.log(data);
+        //     }catch(err){
+        //         console.log(err);
+        //     }            
+        // }
+        // getAllNames();         
+        
+        // //GET ONE NAME
+        // fetch("/api/names/1").then(res=>res.json()).then(data=>{
+        //     console.log(data);
+        // }).catch(err=>{
+        //     console.log(err);
+        // }) 
+
+        // // POST(ADD NEW NAME)
+        // let newName={fName:"Lisa",lName:"Lin"};
+        // fetch("/api/names",{
+        //     method:"POST",
+        //     body:JSON.stringify(newName),
+        //     headers:{
+        //         "Content-Type": "application/json"
+        //     }
+        // }).then(res=>res.json()).then(data=>{
+        //     console.log(data);
+        // }).catch(err=>{
+        //     console.log(err);
+        // })
+        
+        // //PUT (UPDATE EXISTING NAME)
+        // let updateName={fName:"Lynda",lName:"Lin"};
+        // fetch("/api/names/1",{
+        //     method:"PUT",
+        //     body:JSON.stringify(updateName),
+        //     headers:{
+        //         "Content-Type": "application/json"
+        //     }
+        // }).then(res=>res.json()).then(data=>{
+        //     console.log(data);
+        // }).catch(err=>{
+        //     console.log(err);
+        // })
+
+        // //DELETE (DELETE EXISTING NAME)        
+        // fetch("/api/names/1",{
+        //     method:"DELETE"            
+        // }).then(res=>{
+        //     //console.log(res)
+        //     if(res.status==204){
+        //         console.log("Name at index 1 deleted successfully");
+        //     }else{
+        //         console.log("There was an error deleting name at index 1")
+        //     }
+        // }).catch(err=>{
+        //     console.log(err);
+        // })
+
+    </script>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>First Name</th><th>Last Name</th>
+            </tr>            
+        </thead>
+        <tbody>
+            <tr data-id="0"><td>Name</td><td>One</td></tr>
+            <tr data-id="1"><td>Name</td><td>Two</td></tr>
+            <tr data-id="2"><td>Name</td><td>Three</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>

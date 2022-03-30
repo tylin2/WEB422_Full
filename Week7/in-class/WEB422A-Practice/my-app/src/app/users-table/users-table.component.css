@@ -1,0 +1,8 @@
+table, table tr, table td, table th{
+    border: 1px solid grey
+}
+
+.activeUser{
+    color: green;
+    font-weight: bold;
+}

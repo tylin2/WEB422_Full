@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th [style.color]="tableNameSpanColor" [attr.colspan]="tableNameSpan">
+            First Name &amp; Last Name
+            </th>
+            <th>Address</th>
+            <th>Active</th>
+        </tr>   
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.fName}}</td>
+            <td>{{user.lName}}</td>
+            <td>{{user.address}}</td>
+            <!--<td [class.activeUser]="user.active" [ngSwitch]="user.active"><span *ngSwitchCase="true">Active</span><span *ngSwitchCase="false">Inactive</span></td>-->
+            <td [class.activeUser]="user.active"><span *ngIf="user.active">Active</span><span *ngIf="!user.active">Inactive</span></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<app-custom-event-button (customEvent)="handleUstomEvent($event)"></app-custom-event-button>

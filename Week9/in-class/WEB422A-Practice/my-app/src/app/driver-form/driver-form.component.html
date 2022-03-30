@@ -1,0 +1,31 @@
+<h1>Driver Form</h1>
+
+<form #f="ngForm" (ngSubmit)="handleSubmit(f)">
+    Full Name: <input type="text" name="name" required pattern="[a-zA-Z ]*" [(ngModel)]="driverData.name" #name="ngModel" />
+        <span *ngIf="name.errors?.required"><br />Name is required</span>
+        <span *ngIf="name.errors?.pattern"><br />Name cannot contain numbers</span>
+    <br /><br />
+    Description: <br />
+    <textarea name="description" [(ngModel)]="driverData.description"></textarea>
+    <br /><br />
+    Owned Transportation<br />
+    <select multiple name="ownedTransportation" [(ngModel)]="driverData.ownedTransportation">
+        <option *ngFor="let option of transportationList" [value]="option.value">{{option.text}}</option>
+    </select>
+    <br /><br />
+    Favourite Transportation<br />
+    <select name="favouriteTransportation" [(ngModel)]="driverData.favouriteTransportation">
+        <option *ngFor="let option of transportationList" [value]="option.value">{{option.text}}</option>
+    </select>
+    <br /><br />
+    <label><input type="checkbox" name="licence" [(ngModel)]="driverData.driverLicence" /> Driver Licence</label>
+    <br /><br />
+    Vehicle Use<br />
+    <!--<label><input type="radio" name="vehicleUse" [(ngModel)]="driverData.vehicleUse" value="business"> Business</label><br />
+    <label><input type="radio" name="vehicleUse" [(ngModel)]="driverData.vehicleUse" value="pleasure"> Pleasure</label>-->
+
+    <label *ngFor="let vehicleUse of vehicleUseList"><input type="radio" name="vehicleUse" [(ngModel)]="driverData.vehicleUse" [value]="vehicleUse.value"> {{vehicleUse.text}}<br /></label>
+
+    <br /><br />
+    <button type="submit" [disabled]="!f.valid">Submit Driver Information</button><br />
+</form>

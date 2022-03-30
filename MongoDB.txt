@@ -1,0 +1,1 @@
+mongodb+srv://AdUser:1qaz2wsx@cluster0.b215x.mongodb.net/sample_restaurants?retryWrites=true&w=majority
